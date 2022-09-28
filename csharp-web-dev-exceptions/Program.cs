@@ -7,17 +7,31 @@ namespace csharp_web_dev_lsn9exceptions
 {
     class Program
     {
-        /*
+        
         static double Divide(double x, double y)
         {
-            // Write your code here!
+            if (y == 0.0)
+            {
+                throw new ArgumentOutOfRangeException("y", "You cannot divide by zero!");
+            }
+            else
+            {
+                return x / y;
+            }
         }
 
         static int CheckFileExtension(string fileName)
         {
-            // Write your code here!
+            try
+            {
+                Divide(num1, num2);
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
-        */
+        
 
         static void Main(string[] args)
         {
