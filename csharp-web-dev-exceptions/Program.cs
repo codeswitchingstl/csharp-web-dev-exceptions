@@ -24,7 +24,7 @@ namespace csharp_web_dev_lsn9exceptions
         {
             try
             {
-                Divide(num1, num2);
+                Divide(5, 2);
             }
             catch (ArgumentOutOfRangeException e)
             {
@@ -36,7 +36,24 @@ namespace csharp_web_dev_lsn9exceptions
         static void Main(string[] args)
         {
             // Test out your Divide() function here!
-
+            static int CheckFileExtension(string fileName)
+            {
+                if (fileName == null || fileName == "")
+                {
+                    throw new ArgumentNullException("fileName", "Student did not submit any work!");
+                }
+                else
+                {
+                    if (fileName.Substring(fileName.Length - 3, 3) == ".cs")
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
             // Test out your CheckFileExtension() function here!
             Dictionary<string, string> students = new Dictionary<string, string>();
             students.Add("Carl", "Program.cs");
